@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  /* Medidas do Figma */
+  --preto: hsl(240,6%, 13% );
+  --cinza: hsl(240, 9%, 89%);
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+
+  /* Adicionar font-smooth do opera aqui */
+}
+
+body {
+  display: grid;
+  place-items: center;
+
+}
+
+main {
+  background-image: url("img/Background.svg");
+  /* Medidas do Figma */
+  width: 23.43rem;
+  max-height: 50.75rem;
+}
+
+.container {
+  /* Medidas do Figma */
+  max-width: 15.62rem;
+  /* Box Model 
+    Uma outra maneira de centralizar elementos
+  */
+  margin: auto;
+
+  text-align: center;
+
+  color: var(--cinza);
+}
+
+
+.avatar {
+  /* 160px 
+    Limitando ao Tamanho da imagem
+  */
+  width: 10rem;
+  /* Top - Laterais - Bottom */
+  margin: 11.5rem auto 0;
+
+  position: relative;
+}
+
+.avatar span {
+  position: absolute;
+  top: -15px;
+
+  /* Clip path afeta o z-index */
+  z-index: 1;
+
+}
+
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+
+  /* Valores criados no Clip-path css maker */
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)
+}
+
+
+
+h1 {
+  font-size: 1.5rem;
+
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--cinza);
+  text-decoration: none;
+
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0.75rem;
+
+  justify-content: center;
+
+  /* Garantia de centrelização */
+  align-items: center;
+
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+
+  list-style: none;
+  /*Remover o padding da esquerda*/
+  padding: 0;
+
+  display: flex;
+  gap: 0.5rem;
+
+  /* Com flex text align perde algumas propriedades
+    A diferença é pequena mas está centralizando
+  */
+  justify-content: center;
+}
