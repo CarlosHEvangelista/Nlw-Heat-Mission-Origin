@@ -2,6 +2,8 @@
 
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -13,25 +15,24 @@ body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
 
+  
+  display: grid;
+  place-items: center;
   /* Adicionar font-smooth do opera aqui */
 }
 
-body {
-  display: grid;
-  place-items: center;
-
-}
 
 main {
-  background-image: url("img/Background.svg");
+  background: url("img/Background.svg") no-repeat center/cover ;
   /* Medidas do Figma */
-  width: 23.43rem;
-  max-height: 50.75rem;
+  width: 100vw;
+  min-height: 912px;
+  height: 100vh;
 }
 
 .container {
   /* Medidas do Figma */
-  max-width: 15.62rem;
+  width: 15.62rem;
   /* Box Model 
     Uma outra maneira de centralizar elementos
   */
@@ -97,7 +98,7 @@ a {
 }
 
 p {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 ul {
