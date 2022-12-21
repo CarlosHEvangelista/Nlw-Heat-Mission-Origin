@@ -6,52 +6,58 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  /* Medidas do Figma */
+/* Adicionar font-smooth do opera aqui */
+
+html {
+/*   Medidas do Figma 
   --preto: hsl(240,6%, 13% );
-  --cinza: hsl(240, 9%, 89%);
-
-  height: 100%;
-  font-family: 'Roboto', sans-serif;
-
   
+  font-family: 'Roboto', sans-serif;
+*/
+  
+  --cinza: hsl(240, 9%, 89%);
+}
+/*
+body {
   display: grid;
   place-items: center;
-  /* Adicionar font-smooth do opera aqui */
-}
-
+} 
+*/
 
 main {
-  background: url("img/Background.svg") no-repeat center/cover ;
+  background: url("img/Background.svg") no-repeat top/cover
+  ;
+
   /* Medidas do Figma */
-  width: 100vw;
-  min-height: 912px;
   height: 100vh;
+
+  text-align: center;
+  padding-top: 11.5rem;
+
 }
 
 .container {
-  /* Medidas do Figma */
-  width: 15.62rem;
+  /* Medidas do Figma 
+  max-width: 15.62rem;*/
   /* Box Model 
     Uma outra maneira de centralizar elementos
-  */
+  
   margin: auto;
 
   text-align: center;
-
+*/
   color: var(--cinza);
 }
 
-
+ 
 .avatar {
-  /* 160px 
+ /* 160px 
     Limitando ao Tamanho da imagem
-  */
-  width: 10rem;
-  /* Top - Laterais - Bottom */
-  margin: 11.5rem auto 0;
-
+  
+  width: 10rem;*/
+  /* Top - Laterais - Bottom 
+  
+ */
   position: relative;
 }
 
@@ -59,7 +65,7 @@ main {
   position: absolute;
   top: -15px;
 
-  /* Clip path afeta o z-index */
+ /* Clip path afeta o z-index */
   z-index: 1;
 
 }
@@ -74,8 +80,7 @@ main {
 }
 
 
-
-h1 {
+/*h1 {
   font-size: 1.5rem;
 
   margin-top: 1.5rem;
@@ -91,8 +96,8 @@ a {
   gap: 0.75rem;
 
   justify-content: center;
-
-  /* Garantia de centrelização */
+*/
+  /* Garantia de centrelização 
   align-items: center;
 
 }
@@ -100,19 +105,28 @@ a {
 p {
   margin-top: 1.5rem;
 }
-
+*/
 ul {
-  margin-top: 4rem;
 
   list-style: none;
-  /*Remover o padding da esquerda*/
+ /*Remover o padding da esquerda
   padding: 0;
-
+*/
   display: flex;
   gap: 0.5rem;
 
   /* Com flex text align perde algumas propriedades
-    A diferença é pequena mas está centralizando
-  */
+    A diferença é pequena mas está centralizando*/
+  
   justify-content: center;
 }
+
+/*
+@media(min-width: 800px)  {
+  
+  main {    
+    width: 358px;
+    min-height: 540px;
+  }
+
+}*/
