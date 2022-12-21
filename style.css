@@ -6,46 +6,39 @@
   box-sizing: border-box;
 }
 
-/* Adicionar font-smooth do opera aqui */
+
 
 html {
-/*   Medidas do Figma 
-  --preto: hsl(240,6%, 13% );
-  
+/*   Medidas do Figma */
+--cinza: hsl(240, 9%, 89%);
   font-family: 'Roboto', sans-serif;
-*/
-  
-  --cinza: hsl(240, 9%, 89%);
+
+  /* Adicionar font-smooth do opera aqui */
+ 
 }
-/*
-body {
-  display: grid;
-  place-items: center;
-} 
-*/
+
 
 main {
   background: url("img/Background.svg") no-repeat top/cover
   ;
 
   /* Medidas do Figma */
-  height: 100vh;
+  min-height: 100vh;
 
   text-align: center;
-  padding-top: 11.5rem;
-
+  padding-top: 10.8rem;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
-  /* Medidas do Figma 
-  max-width: 15.62rem;*/
+  /* Medidas do Figma */
+  width: 15.62rem;
   /* Box Model 
     Uma outra maneira de centralizar elementos
-  
-  margin: auto;
+*/  
 
-  text-align: center;
-*/
+
   color: var(--cinza);
 }
 
@@ -80,7 +73,7 @@ main {
 }
 
 
-/*h1 {
+h1 {
   font-size: 1.5rem;
 
   margin-top: 1.5rem;
@@ -90,25 +83,26 @@ a {
   color: var(--cinza);
   text-decoration: none;
 
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
 
   display: flex;
   gap: 0.75rem;
 
   justify-content: center;
-*/
+
   /* Garantia de centrelização 
   align-items: center;
-
-}
-
-p {
-  margin-top: 1.5rem;
-}
 */
-ul {
 
+}
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
   list-style: none;
+  
  /*Remover o padding da esquerda
   padding: 0;
 */
@@ -120,6 +114,7 @@ ul {
   
   justify-content: center;
 }
+
 
 /*
 @media(min-width: 800px)  {
