@@ -114,8 +114,33 @@ ul {
   
   justify-content: center;
 }
+/* 
+li {
+  transform: translateY(0);
+  transition: 1s;
+} */
 
-  
+li:hover {
+  animation: TranslateAndScale 2s;
+}
+
+@keyframes TranslateAndScale {
+  25% {
+    transform: translateY(-40px) ;
+  }
+
+  50% {
+    transform: translateY(-40px) rotate(360deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+
+
+
+
+}  
 
 @media(min-width: 800px)  {
 
