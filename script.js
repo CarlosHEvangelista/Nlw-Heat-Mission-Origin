@@ -44,7 +44,7 @@ function getGitHubUserInfos() {
       Bio.textContent = data.bio
       UserLink.href = data.html_url
       UserLink.children[1].textContent = data.login
-      Avatar.children[1].src = data.avatar_url
+      Avatar.src = data.avatar_url
     })
 }
 

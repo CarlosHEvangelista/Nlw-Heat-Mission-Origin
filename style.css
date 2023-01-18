@@ -3,27 +3,21 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
 
-
-
-html {
-/*   Medidas do Figma */
---cinza: hsl(240, 9%, 89%);
+  color: #E1E1E6;
   font-family: 'Roboto', sans-serif;
-
-  /* Adicionar font-smooth do opera aqui */
- 
+  text-decoration: none;
+  list-style: none;
 }
 
 
 main {
-  background: url("img/mobile.svg") no-repeat top/cover
-  ;
+  background: url("img/mobile.svg") no-repeat center/cover;
+
+  padding-top: 11.5rem;
 
   /* Medidas do Figma */
-  height: 100%;
+  height: 100vh;
 
   text-align: center;
   display: flex;
@@ -36,25 +30,20 @@ main {
   /* Box Model 
     Uma outra maneira de centralizar elementos
 */  
-
-  padding-top: 10.8rem;
-
-  color: var(--cinza);
-}
-
- 
-.avatar {
- /* 160px 
-    Limitando ao Tamanho da imagem
-  
-  width: 10rem;*/
-  /* Top - Laterais - Bottom 
-  
- */
   position: relative;
 }
 
-.avatar span {
+#Avatar {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+
+  /* Valores criados no Clip-path css maker */
+  clip-path: polygon(50% 0, 100% 27%, 100% 75%, 50% 100%, 0 75%, 0 27%);
+}
+
+
+span img {
   position: absolute;
   top: -15px;
 
@@ -63,27 +52,16 @@ main {
 
 }
 
-.avatar > img {
-  width: 10rem;
-  height: 11.5rem;
-  object-fit: cover;
-
-  /* Valores criados no Clip-path css maker */
-  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)
-}
-
-
 h1 {
+  margin: 1.5rem 0 0.25rem;
+
   font-size: 1.5rem;
 
-  margin-top: 1.5rem;
 }
 
-a {
+a[href="https://github.com/carloshevangelista"] {
   color: var(--cinza);
   text-decoration: none;
-
-  margin-top: 0.5rem;
 
   display: flex;
   gap: 0.75rem;
@@ -95,17 +73,16 @@ a {
 */
 
 }
+
+
 p {
+  font-size: 14px;
   margin-top: 2rem;
 }
 
 ul {
   margin-top: 4rem;
-  list-style: none;
   
- /*Remover o padding da esquerda
-  padding: 0;
-*/
   display: flex;
   gap: 0.5rem;
 
@@ -114,11 +91,7 @@ ul {
   
   justify-content: center;
 }
-/* 
-li {
-  transform: translateY(0);
-  transition: 1s;
-} */
+
 
 li:hover {
   animation: TranslateAndScale 2s;
@@ -145,49 +118,43 @@ li:hover {
 @media(min-width: 800px)  {
 
   body {
-    background: url("img/Sem\ título.png");
+    background: url("img/Desktop.svg") no-repeat 50% 40%/cover;
   }
 
   main {
-    width: 358px;
-    height: 580px;
-    background: url("img/mobile.svg") no-repeat center/cover ;
+    width: 22.375rem;
+    height: auto;
+    background: url("img/DesktopMain.svg") no-repeat 0% 41%/cover ;
+    padding-top: 4.5rem;
 
     margin: 80px auto 0;
-  }
 
-  .container {
-    padding-top: 4.50rem;
     position: relative;
   }
 
-  .container::before {
+  main::before {
     content: "";
-    background: linear-gradient(161.24deg, #FE0000 -15.25%, #FFCD1E 111.89%);;
-    display: block;
-    width: 64px;
-    height: 128px;
+    background: linear-gradient(161.24deg, #1400fe -15.25%, #13ffff 111.89%);;
+    display: inline-block;
+    width: 4rem;
+    height: 6.5rem;
     position: absolute;
-    top: -100px;
-    left: 95px;
+    top: -85px;
+    z-index: 1000;
+    
   }
 
-  .container::after {
+  main::after {
     content: "";
     background: black;
-    width: 80px;
-    height: 8px;
+    width: 5rem;
+    height: 0.5rem;
     position: absolute;
-    left: 87px;
-    top: 20px;    
-  }
-
-  p {
-    font-size:14px;   
-  }
+    top: 1rem;    
+  } 
 
   ul {
-    margin-top: 2.5rem;
+    margin: 2.5rem 0.5rem;
   }
 
 
