@@ -1,161 +1,130 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding:0;
 
-  color: #E1E1E6;
-  font-family: 'Roboto', sans-serif;
-  text-decoration: none;
-  list-style: none;
+    font-family: 'Roboto', sans-serif;
+    color: #E1E1E6;
+    text-decoration: none;
+    list-style: none;
 }
-
 
 main {
-  background: url("img/mobile.svg") no-repeat center/cover;
-
-  padding-top: 11.5rem;
-
-  /* Medidas do Figma */
-  height: 100vh;
-
-  text-align: center;
-  display: flex;
-  justify-content: center;
+    background: url("img/Mobile.svg") center/cover;
+    height: 100vh;
+    padding-top: 11.5rem; 
 }
 
-.container {
-  /* Medidas do Figma */
-  width: 15.62rem;
-  /* Box Model 
-    Uma outra maneira de centralizar elementos
-*/  
-  position: relative;
+#Container {
+    margin: 0 auto;
+    text-align: center;
+    width: 15.25rem;
+
+    position: relative;   
 }
 
 #Avatar {
-  width: 10rem;
-  height: 11.5rem;
-  object-fit: cover;
+    width: 10rem;
+    height: 11.5rem;
+    object-fit: cover;
+    clip-path: polygon(50% 0, 100% 27%, 100% 75%, 50% 100%, 0 75%, 0 27%);
 
-  /* Valores criados no Clip-path css maker */
-  clip-path: polygon(50% 0, 100% 27%, 100% 75%, 50% 100%, 0 75%, 0 27%);
 }
 
-
 span img {
-  position: absolute;
-  top: -15px;
-
- /* Clip path afeta o z-index */
-  z-index: 1;
-
+    position: absolute;
+    top: -12px;
+    z-index: 10;
 }
 
 h1 {
-  margin: 1.5rem 0 0.25rem;
-
-  font-size: 1.5rem;
-
+    margin: 1.5rem 0 0.25rem ;
+    font-size: 1.5rem;
 }
 
-a[href="https://github.com/carloshevangelista"] {
-  color: var(--cinza);
-  text-decoration: none;
-
-  display: flex;
-  gap: 0.75rem;
-
-  justify-content: center;
-
-  /* Garantia de centrelização 
-  align-items: center;
-*/
-
+#Container > a {
+    display: inline-flex;
+    gap: 0.75rem ;
+    margin-bottom: 2rem;
 }
-
 
 p {
-  font-size: 14px;
-  margin-top: 2rem;
+    font-size: 0.875rem;
+    margin-bottom: 4rem;
 }
 
 ul {
-  margin-top: 4rem;
-  
-  display: flex;
-  gap: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
 
-  /* Com flex text align perde algumas propriedades
-    A diferença é pequena mas está centralizando*/
-  
-  justify-content: center;
+    justify-content: center;
 }
 
-
-li:hover {
-  animation: TranslateAndScale 2s;
-}
-
-@keyframes TranslateAndScale {
-  25% {
-    transform: translateY(-40px) ;
-  }
-
-  50% {
-    transform: translateY(-40px) rotate(360deg);
-  }
-
-  100% {
-    transform: translateY(0) rotate(360deg);
-  }
-
-
-
-
-}  
-
-@media(min-width: 800px)  {
-
-  body {
-    background: url("img/Desktop.svg") no-repeat 50% 40%/cover;
-  }
-
-  main {
-    width: 22.375rem;
-    height: auto;
-    background: url("img/DesktopMain.svg") no-repeat 0% 41%/cover ;
-    padding-top: 4.5rem;
-
-    margin: 80px auto 0;
-
-    position: relative;
-  }
-
-  main::before {
-    content: "";
-    background: linear-gradient(161.24deg, #1400fe -15.25%, #13ffff 111.89%);;
-    display: inline-block;
-    width: 4rem;
-    height: 6.5rem;
-    position: absolute;
-    top: -85px;
-    z-index: 1000;
+@media(min-width: 900px) {
     
-  }
+    body {
+        background: url("img/Desktop.svg") no-repeat 0 35%/cover;
+    }
+    
+    main {
+        background: url("img/DesktopMain.svg") 0 34%/cover;
+        width: 22.375rem;
+        height: auto;
+        margin: 5rem auto 0;
+        padding-top: 4.5rem;
+        position: relative;
 
-  main::after {
-    content: "";
-    background: black;
-    width: 5rem;
-    height: 0.5rem;
-    position: absolute;
-    top: 1rem;    
-  } 
+    }
 
-  ul {
-    margin: 2.5rem 0.5rem;
-  }
+    main::before {
+        content: "";
+        background: linear-gradient(#0500ff 0%, #1efff2 100%);
+        height: 6rem;
+        width: 4rem;
+
+        position: absolute;
+        top: -5rem;
+        left: 9rem;
+
+        z-index: 1000;
+    }
+
+    main::after {
+        content: "";
+        background: #121214;
+        height: 0.5rem;
+        width: 5rem;
+
+        position: absolute;
+        top: 0.85rem;
+        left: 8.5rem;
+    }
+    
+    p {
+        margin-bottom: 2.5rem;
+    }
+
+    #SocialMediasLinksList li:hover {
+        animation: TranslateAndRotate 2s;
+    }
+    
+    @keyframes  TranslateAndRotate {
+        25% {
+            transform: translateY(50%);
+        }
+
+        50% {
+            transform: translateY(50%) rotate(360deg);
+        }
 
 
+        100% {
+            transform: translateY(0%) rotate(360deg);
+        }
+    }
 }
+
+
+
